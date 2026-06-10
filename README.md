@@ -275,7 +275,7 @@ ActiveX komponentdan avtorizatsiya so'raydi — PIN dialogini ko'rsatadi yoki ma
 Start-Process "C:\Program Files\StyxClient\Register-ActiveX.bat" -Verb RunAs -Wait
 
 
-Oldingi tekshiruv buyrug'ini qayta ishlatsa bo'ladi:
+# ActiveX holatini tekshirish
 
 
 $dlls = @("SxCertCheckCntrl", "SxContViewCntrl", "SxWizardCntrl")
