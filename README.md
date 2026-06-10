@@ -268,3 +268,8 @@ ActiveX komponentdan avtorizatsiya so'raydi — PIN dialogini ko'rsatadi yoki ma
 ## `status` qiymatlari
 
 `success` · `error` · `cancelled` · `success2` (litsenziya amallari uchun) · `ok` (auth endpointlari uchun).
+
+
+
+# Admin PowerShell da ishga tushiring:
+Start-Process "C:\Program Files\StyxClient\Register-ActiveX.bat" -Verb RunAs -Wait
