@@ -273,3 +273,17 @@ ActiveX komponentdan avtorizatsiya so'raydi — PIN dialogini ko'rsatadi yoki ma
 
 # Admin PowerShell da ishga tushiring:
 Start-Process "C:\Program Files\StyxClient\Register-ActiveX.bat" -Verb RunAs -Wait
+
+
+Oldingi tekshiruv buyrug'ini qayta ishlatsa bo'ladi:
+
+
+$dlls = @("SxCertCheckCntrl", "SxContViewCntrl", "SxWizardCntrl")
+foreach ($dll in $dlls) {
+    $found = Get-ChildItem "HKLM:\SOFTWARE\Classes" -ErrorAction SilentlyContinue | Where-Object { $_.PSChildName -match $dll }
+    if ($found) {
+        Write-Host "REGISTERED: $dll"
+    } else {
+        Write-Host "NOT REGISTERED: $dll"
+    }
+}
